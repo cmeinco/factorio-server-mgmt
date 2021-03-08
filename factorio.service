@@ -1,0 +1,14 @@
+[Unit]
+Description=Factorio Server
+
+[Service]
+ExecStart=/opt/factorio/factorio/bin/x64/factorio --start-server /opt/factorio/factorio/games/217380seed.zip --port 1234 --server-settings /opt/factorio/factorio/configs/server-settings.json
+WorkingDirectory=/opt/factorio/factorio
+Restart=on-failure
+Type=simple
+User=ec2-user
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
+

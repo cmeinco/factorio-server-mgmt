@@ -1,0 +1,8 @@
+[Unit]
+Description=Shutdown server if game not played in 1 h
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh /usr/local/bin/shutdowndelay.sh
+
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=Update DNS entry in cloudflare every 2 minutes
+
+[Timer]
+OnBootSec=120min
+OnCalendar=*:0/15
+Unit=shutdowndelay.service
+
+[Install]
+WantedBy=basic.target
+
